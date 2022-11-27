@@ -700,11 +700,6 @@ address {
     display: block;
 }
 
-.product-thumb p{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
 .product-link .details{
     display: block;
