@@ -51,7 +51,7 @@
             <section class="hero">
                 <div class="hero-block container centered">
                     <h1 class="hero-title">Ефективні рішення для<br> вашого бізнесу</h1>
-                    <button type="button" class="hero-button">Замовити послугу</button>
+                    <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
                 </div>
             </section>
             
@@ -104,9 +104,24 @@
             <section class="working-block centered">
                 <h2 class="topic">Чим ми займаємося</h2>
                 <ul class="lists flexbox container">
-                    <li class="item"><img src="./image/box1.jpg" alt="tablet" width="370"></li>
-                    <li class="item"><img src="./image/box2.jpg" alt="mobile" width="370"></li>
-                    <li class="item"><img src="./image/box3.jpg" alt="desktop" width="370"></li>
+                    <li class="item">
+                        <div class="thumb">
+                            <img src="./image/box1.jpg" alt="tablet" width="370">
+                            <p>Десктопні додатки</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumb">
+                            <img src="./image/box2.jpg" alt="mobile" width="370">
+                            <p>Мобільні додатки</p>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="thumb">
+                            <img src="./image/box3.jpg" alt="desktop" width="370">
+                            <p>Дизайнерські рішення</p>
+                        </div>
+                    </li>
                 </ul>
             </section>
 
@@ -367,6 +382,12 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <p></p>
+            <button class="modal-close" data-modal-close>x</button>
+        </div>
+    </div>
     <script src="./js/modal.js"></script>
 </body>
 </html>
