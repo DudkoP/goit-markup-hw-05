@@ -686,8 +686,11 @@ address {
 }
 
 .overlay p{
-    padding: 63px 24px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    padding: 0 23px;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;
