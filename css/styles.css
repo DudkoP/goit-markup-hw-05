@@ -616,7 +616,7 @@ address {
     background-color: var(--color-blue);
 }
 
-.join-us-logo{
+.social-link .join-us-logo{
     fill: var(--color-white);
 }
 
