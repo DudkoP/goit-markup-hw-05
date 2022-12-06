@@ -142,6 +142,10 @@ header{
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current{
+    color: var(--color-blue);
+}
+
 .header-link.current::after{
     position: absolute;
     content: '';
@@ -163,9 +167,10 @@ header{
     color: var(--color-7575);
     font-weight: 500;
     padding: 32px 0;
-    display: inline-block;
-    vertical-align: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-contact-link svg{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -246,11 +251,13 @@ header{
     height: 100%;
     background-color: rgba(0,0,0, 0.2);
     opacity: 1;
-    transition: opacity 500ms ease;
+    scale: 1;
+    transition: opacity 500ms ease, scale 500ms ease;
 }
 
 .backdrop.is-hidden{
     opacity: 0;
+    scale: 0.2;
     pointer-events: none;
 }
 
@@ -288,7 +295,6 @@ header{
     width: 11px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 
@@ -372,11 +378,6 @@ header{
     opacity: 1;
 }
 
-/* .thumb:hover p{
-    opacity: 1;
-    transition: opacity 250ms cubic-bezier(.73, .41, .25, 1) ;
-} */
-
 .working-block .lists img{
     display: block;
 }
@@ -439,17 +440,22 @@ header{
     height: 44px;
     width: 44px;
     border-radius: 50%;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link svg{
+    fill: #AFB1B8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .social-link:hover, .social-link:focus{
     background: var(--color-button-active);
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .social-link:hover .social-logo,
 .social-link:focus .social-logo{
     fill: var(--color-white);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item:not(:last-child) {
@@ -492,15 +498,21 @@ header{
     margin-right: 30px;
 }
 
+.works-link{
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.works-link svg{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .works-link:hover, .works-link:focus {
     border: 1px solid var(--color-button-active);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works-link:hover .company-logo,
 .works-link:focus .company-logo {
     fill: var(--color-button-active);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works-link{
@@ -635,9 +647,9 @@ address {
     font-size: 16px;
     line-height: 1.625;
     letter-spacing: 0.03em;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: 'box-shadow' 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, background, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .folio-button:hover,
@@ -692,11 +704,11 @@ address {
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
+    transition: transform 250ms ease;
 }
 
 .product-link:hover .product-thumb .overlay{
     transform: translateY(0%);
-    transition: transform 250ms ease;
 }
 
 .overlay p{
